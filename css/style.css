@@ -1,0 +1,670 @@
+:root {
+    --primary: #17171a;
+    --accent: #febf32;
+    --secondary: #09c168;
+    --primary-grey: #20222b;
+    --muted: #abafc4;
+    --gradient-primary: linear-gradient(90deg, rgba(9, 193, 104, 1) 25%, rgba(254, 191, 50, 0.9373949408865109) 95%, rgba(234, 57, 67, 0.794537798029368) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--primary);
+}
+
+.flex {
+    display: flex;
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-primary-grey {
+    background-color: var(--primary-grey);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.bg-gradient-primary {
+    background-color: var(--secondary);
+    background: var(--gradient-primary);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.font-gradient {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+    margin: 0px 12px;
+    padding: 16px 8px;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    flex: 1;
+}
+
+.navbar-navigation {
+    display: flex;
+    flex: 5;
+}
+
+.navbar-features {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.brand-font {
+    font-size: 36px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-link {
+    display: flex;
+    color: white;
+    padding: 12px;
+    margin: 4px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all ease-in-out;
+    transition-duration: 250ms;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-feature {
+    width: 32px;
+    height: 32px;
+    fill: var(--accent);
+    margin-left: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+/* content css */
+
+.content {
+    padding-top: 40px;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.content-menu {
+    flex: 1;
+}
+
+.content-main {
+    flex: 7;
+    margin: 0px 48px;
+}
+
+.content-add_money {
+    flex: 2;
+}
+
+.menu {
+    background-color: var(--primary-grey);
+    flex-direction: column;
+    margin-right: 32px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.menu-head {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px;
+    border-bottom: 1px solid var(--accent);
+}
+
+.menu-body {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    padding: 12px;
+    margin: 16px 0px;
+}
+
+.menu-head_icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--accent);
+    margin: 4px 16px 4px 4px;
+    cursor: pointer;
+}
+
+.menu-body_item {
+    fill: var(--muted);
+    color: var(--muted);
+    padding: 12px;
+    margin: 8px 0px;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+}
+
+.menu-body_item:hover {
+    fill: var(--accent);
+    color: var(--accent);
+}
+
+.menu-body_item-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
+
+.card-body {
+    width: 320px;
+    height: 160px;
+    position: relative;
+    flex-direction: column;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 24px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card-body::before {
+    content: "";
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(35%, -35%);
+    border: 20px solid var(--accent);
+    opacity: 70%;
+    border-radius: 50%;
+}
+
+.card-body::after {
+    content: "";
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-15%, 50%);
+    border: 20px solid var(--accent);
+    opacity: 70%;
+    border-radius: 50%;
+}
+
+.card-display {
+    flex: 1;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.card-display_text {
+    flex-direction: column;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+#card-balance_amount {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.card-display_icon {
+    width: 56px;
+    height: 56px;
+    fill: white;
+}
+
+.card-options {
+    flex: 2;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.card-btn {
+    flex: 1;
+    border: none;
+    height: 38px;
+    margin: 8px 4px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 150ms ease-in-out;
+}
+
+.card-btn:hover {
+    box-shadow: none;
+}
+
+.transactions-list {
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.transactions-list_head {
+    flex: 1;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 8px 0px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.transactions-list_head a {
+    color: var(--accent);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.transactions-list_body {
+    flex-direction: column;
+}
+
+.transactions-list_body-item {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.transactions-item-icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--accent);
+
+}
+
+.transactions-item-details {
+    flex: 10;
+    flex-direction: column;
+    margin: 0px 12px;
+}
+
+.transactions-item-amount {
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.item-details_title {
+    margin: 4px 0px;
+}
+
+.item-details_date {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--muted);
+}
+
+.add_money-box {
+    flex-direction: column;
+    padding: 24px;
+    border: 4px solid var(--primary-grey);
+    border-right: none;
+    border-radius: 8px;
+}
+
+.add_money-box-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px 0px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.add_money-input-box {
+    flex-direction: column;
+    margin: 8px 0px;
+    padding: 8px 12px;
+    border: 1px solid rgb(77, 76, 76);
+    border-radius: 8px;
+}
+
+.add_money-input-box label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.add_money-input-box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: large;
+    margin: 4px 0px;
+}
+
+.add_money-box-shortcut {
+    margin: 8px 0px;
+    justify-content: space-between;
+}
+
+.add_money-box-shortcut div {
+    margin-right: 4px;
+}
+
+.popular_label {
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.add_money-shortcut_btn {
+    display: flex;
+    width: 75px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.add_money-box-bank_btn {
+    align-items: center;
+    padding: 12px;
+    background-color: #febd3242;
+    border-radius: 8px;
+    margin: 8px 0px;
+}
+
+.bank_btn-icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--accent);
+}
+
+.bank_btn-detail {
+    flex: 5;
+    margin: 0px 12px;
+}
+
+.bank_btn-more a {
+    flex: 2;
+    color: var(--accent);
+    text-decoration: none;
+    justify-content: baseline;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.bank_btn-detail-title {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.bank_btn-detail-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.add_money-box-btn {
+    background-color: var(--secondary);
+    color: var(--primary-grey);
+    margin: 8px;
+    padding: 12px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 150ms ease-in-out;
+}
+
+.add_money-box-btn {
+    box-shadow: none;
+}
+
+#blur-popup-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(40, 40, 40, 0.25);
+    backdrop-filter: blur(16px);
+    display: none;
+}
+
+.popup-dialog {
+    visibility: hidden;
+    z-index: 10;
+    width: 30vw;
+    transform: translate(0px, -500px) scale(0.1);
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--primary-grey);
+    padding: 16px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 250ms ease-in-out;
+}
+
+.dialog-transaction-detail_text {
+    flex: 3;
+    flex-direction: column;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+#dialog-transaction-amount {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.dialog-transaction-detail_icon {
+    width: 48px;
+    height: 48px;
+    fill: var(--accent);
+    margin: 16px;
+}
+
+.popup-dialog-close {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    cursor: pointer;
+}
+
+.dialog-transaction-status {
+    margin: 16px 0px;
+    padding: 8px 16px;
+    background-color: hsla(151, 91%, 40%, 0.30);
+    border-radius: 8px;
+}
+
+.transaction-status-icon {
+    width: 48px;
+    height: 48px;
+    fill: rgb(11, 219, 56);
+}
+
+.transaction-status-text {
+    margin-left: 12px;
+}
+
+.status-text-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+}
+
+.status-text-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+    color: var(--muted);
+}
+
+.dialog-transaction-address {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--muted);
+}
+
+.transaction-address-box {
+    justify-content: space-between;
+}
+
+.address-from-details {
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.address-to-details {
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.address-to-icon {
+     width: 48px;
+    height: 48px;
+    fill: rgb(11, 219, 56);
+}
+
+.address-details-type {
+    color: var(--accent);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.address-details-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.address-details-bank {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.address-details-date {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 4px;
+}
+
+.address-from-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--primary);
+}
+
+.transaction-address-id {
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.transaction-address-id span {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 4px;
+}
+
+.dialog-transaction-option {
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+}
+
+.dialog-transaction-option button {
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 8px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#dialog-share-btn {
+    background-color: #474747;
+    color: var(--muted);
+}
